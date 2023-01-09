@@ -20,14 +20,14 @@ public class PessoaDTO {
 
     private String nome;
 
-    private String data_nascimento;
+    private String dataNascimento;
 
     @JsonIgnore
     private String cep;
 
     public PessoaDTO(Pessoa pessoa) {
         this.nome = pessoa.getNome();
-        this.data_nascimento = pessoa.getData_nascimento();
+        this.dataNascimento = pessoa.getDataNascimento();
 
     }
 
@@ -37,7 +37,7 @@ public class PessoaDTO {
 
     public Pessoa converterToEntity(EnderecoService enderecoService) {
         List<Endereco> enderecos = enderecoService.findByCep(cep);
-        return new Pessoa(nome, data_nascimento, enderecos);
+        return new Pessoa(nome, dataNascimento, enderecos);
     }
 
 }

@@ -29,7 +29,7 @@ public class PessoaService {
     public Pessoa update(Long pessoa_id){
         Pessoa pessoa = getId(pessoa_id);
         pessoa.setNome(pessoa.getNome());
-        pessoa.setData_nascimento(pessoa.getData_nascimento());
+        pessoa.setDataNascimento(pessoa.getDataNascimento());
 
         return pessoa;
     }

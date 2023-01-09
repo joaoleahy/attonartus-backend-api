@@ -25,23 +25,23 @@ public class Pessoa implements Serializable {
 
     private String nome;
 
-    private String data_nascimento;
+    private String dataNascimento;
 
     @OneToMany(mappedBy = "pessoa")
     @JsonManagedReference
     private List<Endereco> endereco = new ArrayList<>();
 
 
-    public Pessoa(String nome, String data_nascimento, List<Endereco> enderecos) {
+    public Pessoa(String nome, String dataNascimento, List<Endereco> enderecos) {
         this.nome = nome;
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = dataNascimento;
         this.endereco = enderecos;
     }
 
 
-    public Pessoa(Long id, String nome, String data_nascimento) {
+    public Pessoa(Long id, String nome, String dataNascimento) {
         this.id = id;
         this.nome = nome;
-        this.data_nascimento = data_nascimento;
+        this.dataNascimento = dataNascimento;
     }
 }
